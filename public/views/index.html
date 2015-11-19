@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="pubCrawler" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?&libraries=places&sensor=false"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+  <script src="scripts/ngAutocomplete.js"></script>
+  <script src="scripts/ng-map.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <title>Pub Crawler</title>
+</head>
+<body ng-controller="MainController">
+
+  <!-- navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hidden-xs" href="#">Pub Crawler</a>
+        <a class="navbar-brand visible-xs" href="#">P</a>
+        <form ng-submit="submit()" class="navbar-form pull-left" role="search">
+          <div class="form-group">
+            <div class="search">
+              <span class="fa fa-search"></span>
+              <input type="text" class="form-control" placeholder="Search a location">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/signup"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Create an account</button></a></li>
+          <li><a href="#/login"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#signInModal">Sign in</button></a></li>
+        </ul>
+      </div> <!--/.navbar-collapse -->
+    </div>
+  </div>
+
+  <div class="map-wrapper">
+    <ng-map class="map" center="[40.74, -74.18]"></ng-map>
+  </div>
+  
+</body>
+</html>
