@@ -20,17 +20,36 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 
 
 // SERVICES
+app.factory('findBars', ['$http', function($http) {
 
+    var factory = {
+      get: function(geoLocation) {
+        return $http.get("http://");
+      }
+    };
+    return factory;
+}]);
 
+app.factory('getPictures', ['$http', function($http) {
 
-
+    var factory = {
+      get: function(bar) {
+        return $http.get("http://");
+      }
+    };
+    return factory;
+}]);
 
 
 // CONTROLLER
 app.controller('MainController', ['$scope', function($scope) {
 
-    $scope.submit = function () {
+    $scope.$watch('searchInput', function() {
+      $scope.submit();
+    });
 
+    $scope.submit = function () {
+      console.log("hello");
 
     };
 
