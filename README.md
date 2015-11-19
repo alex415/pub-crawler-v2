@@ -2,6 +2,7 @@
 http://pub-crawler.herokuapp.com
 
 ## Overview
+### Work in progress
 An Application to view photos of recommended bars by geographic area using the Google Places API, Google Maps API and Foursquare API.
 
 ## Installation
